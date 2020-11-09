@@ -127,7 +127,7 @@ VicalibEngine::VicalibEngine(const std::function<void()>& stop_sensors_callback,
       // create a new camera object using a provided URI
       camera_.reset(new hal::Camera(hal::Uri(FLAGS_cam)));
       // begin testing
-      std::cout << camera_.width() << endl;
+      std::cout << camera_->Width[0] << std::endl;
     } catch (std::exception& ex) {
       // except log error 
       LOG(FATAL) << "Could not create camera from URI: " << FLAGS_cam
